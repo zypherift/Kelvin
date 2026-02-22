@@ -43,8 +43,8 @@ dependencies {
     // JEI
     modCompileOnly  "mezz.jei:jei-${rootProject.minecraft_version}-common-api:${jei_version}"
 
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10"
-    api "org.jetbrains.kotlin:kotlin-reflect:1.9.10"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0"
+    api "org.jetbrains.kotlin:kotlin-reflect:2.0.0"
 
     // testing
 
@@ -62,7 +62,7 @@ tasks.register("writeVersion") {
     doLast {
         def versionFile = file("build/version.txt")
         versionFile.parentFile.mkdirs()
-        versionFile.setText(project.version.toString().substring("1.20.1-".length()))
+        versionFile.setText(project.version.toString().substring("1.21.1-".length()))
     }
 }
 

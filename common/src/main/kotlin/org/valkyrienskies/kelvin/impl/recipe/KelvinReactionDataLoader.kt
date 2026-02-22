@@ -5,7 +5,6 @@ import com.google.gson.JsonElement
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.packs.resources.ResourceManager
 import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener
-import net.minecraft.util.profiling.ProfilerFiller
 import org.valkyrienskies.kelvin.KelvinMod
 import org.valkyrienskies.kelvin.api.recipe.GasBaseRecipe
 import org.valkyrienskies.kelvin.impl.recipe.KelvinGasRecipeSerializer.parse
@@ -18,8 +17,7 @@ object KelvinReactionDataLoader {
 
         override fun apply(
             objects: MutableMap<ResourceLocation, JsonElement>,
-            resourceManager: ResourceManager,
-            profiler: ProfilerFiller
+            resourceManager: ResourceManager
         ) {
             gas_reactions.clear()
             for ((location, element) in objects) try {
