@@ -178,6 +178,6 @@ object KelvinMod {
     }
 
     fun asResouceLocation(string: String): ResourceLocation {
-        return ResourceLocation("${MOD_ID}:$string")
+        return ResourceLocation.parse("${MOD_ID}:$string")
     }
 }
